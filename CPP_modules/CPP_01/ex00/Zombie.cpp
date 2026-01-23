@@ -6,7 +6,18 @@
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 11:54:39 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/01/22 11:54:40 by dhanlon          ###   ########.fr       */
+/*   Updated: 2026/01/23 09:55:24 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+void Zombie::announce(void)
+{
+	
+}
+
+Zombie::Zombie()
+{
+	
+}
