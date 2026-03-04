@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 11:54:37 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/02/25 11:46:05 by dhanlon          ###   ########.fr       */
+/*   Created: 2026/02/28 13:04:41 by dhanlon           #+#    #+#             */
+/*   Updated: 2026/03/01 18:05:09 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-void randomChump(std::string name)
+HumanB::HumanB(std::string name) : name(name), weapon(NULL)
 {
-	Zombie newZombie(name);
-	
-	newZombie.announce();
+}
+HumanB::~HumanB()
+{
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon = &weapon;
+}
+
+void HumanB::attack()
+{
+    if (weapon)
+        std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+    else
+        std::cout << name << " attacks with their bare hands" << std::endl;
 }

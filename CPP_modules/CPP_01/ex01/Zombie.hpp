@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 11:54:37 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/02/25 11:46:05 by dhanlon          ###   ########.fr       */
+/*   Created: 2026/01/22 11:54:43 by dhanlon           #+#    #+#             */
+/*   Updated: 2026/02/25 13:18:36 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-void randomChump(std::string name)
+#include <iostream>
+#include <sstream>
+
+class Zombie
 {
-	Zombie newZombie(name);
-	
-	newZombie.announce();
-}
+	private:
+		std::string name;
+
+	public:
+		void announce(void);
+		void setName(std::string name);
+		Zombie();
+		~Zombie();
+};
+
+Zombie *zombieHorde(int N, std::string name);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 11:54:39 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/01/23 09:55:24 by dhanlon          ###   ########.fr       */
+/*   Updated: 2026/02/25 11:47:47 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 void Zombie::announce(void)
 {
-	
+	std::cout << name << ": BraiiiiiiinnnzzzZ" << std::endl;
 }
 
-Zombie::Zombie()
+Zombie::Zombie(std::string zombieName)
 {
-	
+	name = zombieName;
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "Destroying " << name << std::endl;
 }

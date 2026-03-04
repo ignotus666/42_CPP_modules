@@ -6,7 +6,7 @@
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 11:54:43 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/01/22 16:50:40 by dhanlon          ###   ########.fr       */
+/*   Updated: 2026/02/25 11:11:39 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Zombie
 
 	public:
 		void announce(void);
-		Zombie();
+		Zombie(std::string);
 		~Zombie();
 };
 

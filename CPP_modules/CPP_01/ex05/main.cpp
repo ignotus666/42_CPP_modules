@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 11:54:37 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/02/25 11:46:05 by dhanlon          ###   ########.fr       */
+/*   Created: 2026/03/04 08:06:08 by dhanlon           #+#    #+#             */
+/*   Updated: 2026/03/04 09:20:33 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
 
-void randomChump(std::string name)
+int main(void)
 {
-	Zombie newZombie(name);
-	
-	newZombie.announce();
+	Harl user;
+
+	user.complain("DEBUG");
+	user.complain("INFO");
+	user.complain("WARNING");
+	user.complain("ERROR");
+
+	//Non-valid level:
+	user.complain("WHINING");
 }

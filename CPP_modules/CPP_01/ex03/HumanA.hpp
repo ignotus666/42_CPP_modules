@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/22 11:54:37 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/02/25 11:46:05 by dhanlon          ###   ########.fr       */
+/*   Created: 2026/02/26 12:15:10 by dhanlon           #+#    #+#             */
+/*   Updated: 2026/02/28 12:39:32 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+#define HUMANA_HPP
 
-void randomChump(std::string name)
+#include "Weapon.hpp"
+
+class HumanA
 {
-	Zombie newZombie(name);
-	
-	newZombie.announce();
-}
+	private:
+		std::string name;
+		Weapon &weapon;
+	public:
+		HumanA(std::string name, Weapon &weapon);
+		~HumanA();
+		void attack();
+};
+
+#endif
