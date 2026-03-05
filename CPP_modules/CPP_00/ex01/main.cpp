@@ -6,7 +6,7 @@
 /*   By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 16:03:50 by dhanlon           #+#    #+#             */
-/*   Updated: 2026/01/21 18:14:35 by dhanlon          ###   ########.fr       */
+/*   Updated: 2026/03/05 18:58:04 by dhanlon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ int main(void)
 	{
 		std::cout << "Phonebook usage: type ADD to add a new contact, SEARCH to find a contact or EXIT to quit the program\n";
 		std::cout << "Enter your command: ";
-		std::getline(std::cin, user_input);
+		if (!std::getline(std::cin, user_input))
+			break;
 		if (user_input == "ADD")
 		{
 			std::string fields[5];
