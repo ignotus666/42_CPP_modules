@@ -6,7 +6,7 @@
 #    By: dhanlon <dhanlon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 11:50:48 by dhanlon           #+#    #+#              #
-#    Updated: 2026/03/04 10:07:14 by dhanlon          ###   ########.fr        #
+#    Updated: 2026/03/12 09:12:10 by dhanlon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = 	main.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
